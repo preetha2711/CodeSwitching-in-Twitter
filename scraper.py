@@ -2,21 +2,33 @@ import tweepy
 import csv
 import time
 
-auth = tweepy.OAuthHandler("cXv12CchrguyxKpfFA6uBr8z0", "hWX26AU8hVwNAWcQYmrPQ7xGzW99VYoPm0g7vic2VyVV31kOhO")
+auth = tweepy.OAuthHandler("muLJUTtbzimAti4sPkzGi1FCi", "ISwLlpWn7hJ3lwvPADMhlseP9DFRCqxVhJGlPXOQxIBDb3aD0c")
 auth.set_access_token("1612765604-VHcRtBok33g2phCJ7LqzXfaW5ETWXbDyQ9ZtOsV", "8NtdR1E4BeBteltxR0aJBey5ntq8WBjvpaH1DnuaXyt8D")
+
+# api = tweepy.API(auth)
+
+
+# file = open("dalit.txt", "w")
+
+# f = open("jaat.txt", "r")
+# for line in f:
+
+#     for tweet in tweepy.Cursor(api.search, q=line, rpp=100).items(1000):
+#         file.write(tweet.text.encode('utf-8'))
+#         print tweet.text.encode('utf-8')
+
 
 api = tweepy.API(auth)
 
 file = open("dalit.txt", "w")
-
-file = open("dalit.txt", "w")
+count = 0 
 
 f = open("jaat.txt", "r")
 for line in f:
 
-    for tweet in tweepy.Cursor(api.search, q="#"+line, rpp=100).items(1000):
-        # print tweet.text.encode('utf-8')
-        # if (tweet.location == "India"):
+    for tweet in tweepy.Cursor(api.search, q="#"+line, rpp=100).items(3000):
         if ("India" in tweet._json["user"]["location"]):    
+            print tweet.text.encode('utf-8')
             file.write(tweet.text.encode('utf-8'))
-    
+            count += 1  
+print count
