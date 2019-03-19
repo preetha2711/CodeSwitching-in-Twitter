@@ -7,12 +7,19 @@ The presence of code-mixing in a particular instance of speech/text in a bilingu
 
 1.	Vah ladki chair par khadi ho gai
 2.	Yeh mera personal maamla hai.
+
+
 Both instantiate code-mixing on a lexical level. There is a difference, however, in the fact that one might reasonably hear
 1’. Vah kursi par khadi ho gai 
+
 whereas, as someone recently remarked to me, it is much more anomalous for a modern Hindi speaker to say 
+
 2’. Yeh mera vyaktigat maamla hai
+
 Putting it differently: were we to ask 1000 speakers independently to express each of these two thoughts, we might expect to find that the percentage of people who preferred ‘personal’ to ‘vyaktigat’ would be higher than that of those who preferred ‘chair’ to ‘kursi’. Why might this be?
 One explanation is that the discourse of privacy and the personal has been culturally borrowed from a Western ideology. It is not, of course, an imported technology like a ‘phone’ or a ‘fridge’; Hindi might well contain the vocabulary to support it (‘niji’ maamla, ‘apna’ maamla), but using the original English code ‘personal’ might remain the more popular way of expressing a concept that was introduced from outside the cultural currency of Hindi. This is to say that the topical features, or the local semantic properties, of a discussion influence the lingo in which it occurs, owing to the sociocultural history of the discourse itself. 
+
+
 Hypothesis: 
 The relative presence of Hindi in the topical category of gender issues, including but not limited to activism and protest, will be less than that in the topical category of caste-based issues, including but not limited to reservations, Dalit campaigns, and activism.
 The idea of feminism as we comprehend it today emerged in India post-independence. It is still regarded as an upper-class, upper-caste movement, ideologically populated, perhaps, largely by the English-educated stratum of India. On the other hand, there is reason to think that an engagement with caste politics is more deeply entrenched in Indian society and discussion, since it often forms a nerve center for nationwide political discussion, often conducted in regional languages. In both movements, speaking English itself is a political move, since English is the language of the ‘liberated’ and upward mobile in India. 
