@@ -18,17 +18,26 @@ auth.set_access_token("1612765604-VHcRtBok33g2phCJ7LqzXfaW5ETWXbDyQ9ZtOsV", "8Nt
 #         print tweet.text.encode('utf-8')
 
 
-api = tweepy.API(auth)
+api = tweepy.API(auth, wait_on_rate_limit= True)
 
 file = open("dalit.txt", "w")
 count = 0 
 
-f = open("jaat.txt", "r")
-for line in f:
-
-    for tweet in tweepy.Cursor(api.search, q="#"+line, rpp=100).items(3000):
-        if ("India" in tweet._json["user"]["location"]):    
-            print tweet.text.encode('utf-8')
-            file.write(tweet.text.encode('utf-8'))
+# f = open("jaat.txt", "r")
+# for line in f:
+try : 
+    for tweet in tweepy.Cursor(api.search,tweet_mode='extended', q="dalit", rpp=100).items(30000):
+        if ("India" in tweet._json["user"]["location"]):   
+      
+            print tweet.full_text.encode('utf-8')
+            file.write(tweet.full_text.encode('utf-8'))
             count += 1  
-print count
+    print count
+
+except tweepy.TweepError:  
+
+    print "in the except condition"
+    time.sleep(60 * 15)    
+
+     
+
