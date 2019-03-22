@@ -30,6 +30,7 @@ for first_key in RS_D_Trigger:
 			search_term = first_key+" "+second_key+ "\n"
 			count_terms=count_terms+1
 			file.write(search_term.encode('utf-8'))
+D_Keyword = RS_D_NonTrigger + DS_D_Trigger + DS_D_NonTrigger
 for first_key in DS_D_Trigger:
 	for second_key in D_Keyword:
 		if (first_key!=second_key):
