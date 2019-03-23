@@ -20,7 +20,7 @@ auth.set_access_token("1612765604-VHcRtBok33g2phCJ7LqzXfaW5ETWXbDyQ9ZtOsV", "8Nt
 
 api = tweepy.API(auth, wait_on_rate_limit= True)
 
-file = open("Dalit.txt", "w")
+file = open("dalit.txt", "w")
 count = 0 
 
 f = open("D_SearchTerms.txt", "r")
