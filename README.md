@@ -10,11 +10,11 @@ The presence of code-mixing in a particular instance of speech/text in a bilingu
 
 
 Both instantiate code-mixing on a lexical level. There is a difference, however, in the fact that one might reasonably hear
-1’. Vah kursi par khadi ho gai 
+1. Vah kursi par khadi ho gai 
 
 whereas, as someone recently remarked to me, it is much more anomalous for a modern Hindi speaker to say 
 
-2’. Yeh mera vyaktigat maamla hai
+2. Yeh mera vyaktigat maamla hai
 
 Putting it differently: were we to ask 1000 speakers independently to express each of these two thoughts, we might expect to find that the percentage of people who preferred ‘personal’ to ‘vyaktigat’ would be higher than that of those who preferred ‘chair’ to ‘kursi’. Why might this be?
 One explanation is that the discourse of privacy and the personal has been culturally borrowed from a Western ideology. It is not, of course, an imported technology like a ‘phone’ or a ‘fridge’; Hindi might well contain the vocabulary to support it (‘niji’ maamla, ‘apna’ maamla), but using the original English code ‘personal’ might remain the more popular way of expressing a concept that was introduced from outside the cultural currency of Hindi. This is to say that the topical features, or the local semantic properties, of a discussion influence the lingo in which it occurs, owing to the sociocultural history of the discourse itself. 
