@@ -26,7 +26,6 @@ count = 0
 f = open("D_SearchTermsWork.txt", "r+")
 
 try : 
-	#previous=""
 	for line in f:
 		print(line)
 		f.truncate(line)
@@ -36,7 +35,6 @@ try :
 				if("RT @" not in tweet):
 					file.write(tweet.full_text.encode('utf-8'))
 					count += 1  
-				#previous = tweet
 	print count
 
 except tweepy.TweepError:  
