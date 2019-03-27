@@ -20,22 +20,23 @@ auth.set_access_token("1612765604-VHcRtBok33g2phCJ7LqzXfaW5ETWXbDyQ9ZtOsV", "8Nt
 
 api = tweepy.API(auth, wait_on_rate_limit= True)
 
-file = open("dalit4withoutRT.txt", "w")
+file = open("DalitDaarakshantest.txt", "a")
 count = 0 
 
-f = open("D_SearchTerms.txt", "r")
+f = open("D_SearchTermsWork.txt", "r+")
 
 try : 
-	previous=""
+	#previous=""
 	for line in f:
 		print(line)
+		f.truncate(line)
 		for tweet in tweepy.Cursor(api.search,tweet_mode='extended', q=line, rpp=100).items(30000):
 			if ("India" in tweet._json["user"]["location"]):   
 				print tweet.full_text.encode('utf-8')
-				if(tweet!=previous):
+				if("RT @" not in tweet):
 					file.write(tweet.full_text.encode('utf-8'))
 					count += 1  
-				previous = tweet
+				#previous = tweet
 	print count
 
 except tweepy.TweepError:  
