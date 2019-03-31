@@ -21,7 +21,7 @@ auth.set_access_token("1612765604-VHcRtBok33g2phCJ7LqzXfaW5ETWXbDyQ9ZtOsV", "8Nt
 
 api = tweepy.API(auth, wait_on_rate_limit= True)
 
-file = open("DalitDaarakshantest2.txt", "a")
+file = open("DalitDaarakshantest.txt", "a")
 count = 0 
 
 final_line=""
