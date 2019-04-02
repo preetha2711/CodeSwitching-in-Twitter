@@ -2,8 +2,8 @@ import tweepy
 import csv
 import time
 
-auth = tweepy.OAuthHandler("OjNUlb0H895evrer3ewqdOjZj", "XfBi1g9y7ukRMo2ncUW91BuB0PM14BtfHuFiO7VKWWEbSMTW5E")
-auth.set_access_token("1612765604-u0NNqcQHJM2thk0OBQd2dojTZiaOj8mv4x6YUs0", "Gg1KkEi6iP4yUtt7DIqN2F0YPfzQ8mV1TE6JzADzVejCN")
+auth = tweepy.OAuthHandler("UafvyQb74ME2hsXpGcdzh54la", "oSc3Ge2Ek4TbWuwsZTIGXXGQ0GWGytUJJYs7u08aD8KjUcBdjz")
+auth.set_access_token("1612765604-rgTyqHt7tYHcnXkFO7oliItCMKKXwzpRPfXXaoW", "J9QXnOywKek0C07KfLCppqrWiAXcrXWGcBZiZBlppzsde")
 
 # api = tweepy.API(auth)
 
@@ -20,11 +20,11 @@ auth.set_access_token("1612765604-u0NNqcQHJM2thk0OBQd2dojTZiaOj8mv4x6YUs0", "Gg1
 
 api = tweepy.API(auth, wait_on_rate_limit= True)
 
-file = open("Feminism_File_6.txt", "a")
+file = open("Feminism_File_7.txt", "a")
 count = 0 
 
-f = open("F_SearchTermsWork.txt", "r+")
-f_write = open("F_SearchTermsCovered.txt", "a")
+f = open("F_SearchTermsWorkCS1.txt", "r+")
+f_write = open("F_SearchTermsCoveredCS1.txt", "a")
 
 try : 
 	for line in f:
