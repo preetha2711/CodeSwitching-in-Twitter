@@ -20,11 +20,7 @@ auth.set_access_token("1612765604-u0NNqcQHJM2thk0OBQd2dojTZiaOj8mv4x6YUs0", "Gg1
 
 api = tweepy.API(auth, wait_on_rate_limit= True)
 
-<<<<<<< HEAD
 file = open("Feminism_File_6.txt", "a")
-=======
-file = open("DalitDaarakshantest.txt", "a")
->>>>>>> 61dad49a864a8444434bfb5e5d22ffdb012f23df
 count = 0 
 
 f = open("F_SearchTermsWork.txt", "r+")
