@@ -1,20 +1,19 @@
 import openpyxl
 def Occurence(s, corpus):
-	#returns number of times s occurs in D_Corpus
-	if(corpus=="F_Corpus"):
-		return 1
-	return 1
+	file = open(corpus, 'r')
+	count = 0 
+	for line in file:
+		for word in (line.split()):
+			if(word.lower() == s.lower()):
+				count = count+1
+				
+
+	return count
+
 wb = openpyxl.load_workbook('WordSearch.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
-file = open('justtosee.txt', 'w')
-#c1 = sheet.cell(row=1,column=1).value = "hey"
 
 # WS_Emotion = []
-# i1 = 2
-# i2 = 2
-# i3 = 2
-# i4 = 2
-# i=0
 # RS_English = []
 # DS_English = []
 # DS_Hindi = []
@@ -27,21 +26,25 @@ while(i<=55):
 	F_Corpus_Hindi = 0
 	English_word = ""
 	Hindi_word = ""
+	D_Corpus = "DalitDaarakshantest.txt"
+	F_Corpus = "DalitDaarakshantest.txt"
 	while(English_word != "Total" or Hindi_word !="Total"):
 		English_word = sheet.cell(i,1).value
 		Hindi_word = sheet.cell(i,4).value
 		if(English_word is not None and (English_word != "Total")):
 			#RS_English.append(s.encode('utf-8'))
-			D_n = Occurence(English_word.encode('utf-8'), "D_Corpus")
-			F_n = Occurence(English_word.encode('utf-8'), "F_Corpus")
+			D_n = Occurence(English_word.encode('utf-8'), D_Corpus)
+			print(D_n)
+			F_n = Occurence(English_word.encode('utf-8'), F_Corpus)
+			print(D_n)
 			sheet.cell(i,2).value = D_n
 			sheet.cell(i,3).value = F_n
 			D_Corpus_English = D_Corpus_English + D_n
 			F_Corpus_English = F_Corpus_English + F_n
 		if(Hindi_word is not None and (Hindi_word != "Total")):
 			#RS_English.append(s.encode('utf-8'))
-			D_n = Occurence(Hindi_word.encode('utf-8'), "D_Corpus")
-			F_n = Occurence(Hindi_word.encode('utf-8'), "F_Corpus")
+			D_n = Occurence(Hindi_word.encode('utf-8'), D_Corpus)
+			F_n = Occurence(Hindi_word.encode('utf-8'), F_Corpus)
 			sheet.cell(i,5).value = D_n
 			sheet.cell(i,6).value = F_n
 			D_Corpus_Hindi = D_Corpus_Hindi + D_n
@@ -53,8 +56,14 @@ while(i<=55):
 	sheet.cell(i-1,6).value = F_Corpus_Hindi
 	D_Total_Occurence = D_Corpus_Hindi+D_Corpus_English
 	F_Total_Occurence = F_Corpus_Hindi+F_Corpus_English
-	D_ratio = (float)(D_Corpus_Hindi)/(float)(D_Total_Occurence)
-	F_ratio = (float)(F_Corpus_Hindi)/(float)(F_Total_Occurence)
+	if(D_Total_Occurence == 0):
+		D_ratio = "NA"
+	else:
+		D_ratio = (float)(D_Corpus_Hindi)/(float)(D_Total_Occurence)
+	if(F_Total_Occurence == 0):
+		D_ratio = "NA"
+	else:
+		F_ratio = (float)(F_Corpus_Hindi)/(float)(F_Total_Occurence)
 	sheet.cell(i-1,7).value = D_ratio 
 	sheet.cell(i-1,8).value = F_ratio
 	i=i+1 #skip blank line
