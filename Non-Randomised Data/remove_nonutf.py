@@ -36,13 +36,6 @@ for line in file :
 
     line_new = ""
 
-    # count = 0
-    # for word in teststring:
-    #     if ("\\" in word.decode("ascii")):
-    #         count +=1
-    #     else:
-    #         line_new += word.decode("utf-8") + " "
 
-    # f.write(line_new + "\n")
 
 
