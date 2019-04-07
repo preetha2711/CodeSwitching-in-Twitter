@@ -1,5 +1,7 @@
 import openpyxl
 def Occurence(s, corpus):
+	print(s)
+	print(corpus)
 	file = open(corpus, 'r')
 	count = 0 
 	for line in file:
@@ -7,10 +9,10 @@ def Occurence(s, corpus):
 			if(word.lower() == s.lower()):
 				count = count+1
 				
-
+	print(count)
 	return count
 
-wb = openpyxl.load_workbook('WordSearchcopy.xlsx')
+wb = openpyxl.load_workbook('WordSearchResults.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
 
 # WS_Emotion = []
@@ -26,8 +28,8 @@ while(i<=205):
 	F_Corpus_Hindi = 0
 	English_word = ""
 	Hindi_word = ""
-	D_Corpus = "Feminism_File_2.txt"
-	F_Corpus = "Feminism_File_2.txt"
+	D_Corpus = "Dalit_Collated_Cleaned.txt"
+	F_Corpus = "Final_Fem_Collated_Clean.txt"
 	while(English_word != "Total" or Hindi_word !="Total"):
 		English_word = sheet.cell(i,1).value
 		Hindi_word = sheet.cell(i,4).value
@@ -127,6 +129,6 @@ while(i<=205):
 # 	# del DS_Hindi[:]
 # 	# del RS_Hindi[:]
 # 	i=i+1
-wb.save("WordSearch.xlsx")
+wb.save("WordSearchResults.xlsx")
 # for elem in WS_Emotion:
 # 	print(elem)
