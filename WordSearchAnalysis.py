@@ -10,7 +10,7 @@ def Occurence(s, corpus):
 
 	return count
 
-wb = openpyxl.load_workbook('WordSearch.xlsx')
+wb = openpyxl.load_workbook('WordSearchcopy.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
 
 # WS_Emotion = []
@@ -18,25 +18,25 @@ sheet = wb.get_sheet_by_name('Sheet1')
 # DS_English = []
 # DS_Hindi = []
 # RS_Hindi = []
-i=4
-while(i<=55):
+i=3
+while(i<=205):
 	D_Corpus_English = 0
 	D_Corpus_Hindi = 0
 	F_Corpus_English = 0
 	F_Corpus_Hindi = 0
 	English_word = ""
 	Hindi_word = ""
-	D_Corpus = "DalitDaarakshantest.txt"
-	F_Corpus = "DalitDaarakshantest.txt"
+	D_Corpus = "Feminism_File_2.txt"
+	F_Corpus = "Feminism_File_2.txt"
 	while(English_word != "Total" or Hindi_word !="Total"):
 		English_word = sheet.cell(i,1).value
 		Hindi_word = sheet.cell(i,4).value
 		if(English_word is not None and (English_word != "Total")):
 			#RS_English.append(s.encode('utf-8'))
 			D_n = Occurence(English_word.encode('utf-8'), D_Corpus)
-			print(D_n)
+			#print(D_n)
 			F_n = Occurence(English_word.encode('utf-8'), F_Corpus)
-			print(D_n)
+			#print(D_n)
 			sheet.cell(i,2).value = D_n
 			sheet.cell(i,3).value = F_n
 			D_Corpus_English = D_Corpus_English + D_n
@@ -59,12 +59,12 @@ while(i<=55):
 	if(D_Total_Occurence == 0):
 		D_ratio = "NA"
 	else:
-		D_ratio = (float)(D_Corpus_Hindi)/(float)(D_Total_Occurence)
+		D_ratio = (float)(D_Corpus_Hindi)/(float)(D_Total_Occurence)*100
 	if(F_Total_Occurence == 0):
-		D_ratio = "NA"
+		F_ratio = "NA"
 	else:
-		F_ratio = (float)(F_Corpus_Hindi)/(float)(F_Total_Occurence)
-	sheet.cell(i-1,7).value = D_ratio 
+		F_ratio = (float)(F_Corpus_Hindi)/(float)(F_Total_Occurence)*100
+	sheet.cell(i-1,7).value = D_ratio
 	sheet.cell(i-1,8).value = F_ratio
 	i=i+1 #skip blank line
 	
