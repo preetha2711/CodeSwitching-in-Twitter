@@ -4,6 +4,7 @@ en = 0
 hi = 0
 hi_dev = 0
 content = ''
+word_count = 0
 for line in file:
     if "##" not in line:
         content +=line
@@ -11,17 +12,19 @@ for line in file:
         line = line.decode("utf-8")
         maxchar = max(line)
         # print words
-
+        
         for word in words:
-            print(word)
+            word_count +=1
+            # print(word)
             if (("/EN" in word) and ("thisisanewtweet" not in word) and ("fullstop" not in word) and ("questionmark" not in word) and ("exclamationmark" not in word) ):
                 en +=1
-                print("EN \n \n \n")
+                # print("EN \n \n \n")
             elif "/HI" in word:
                 hi +=1
-                print("HI \n \n \n")
+                # print("HI \n \n \n")
             elif u'\u0900' <= maxchar <= u'\u097f':
                 hi_dev +=1
+                print (word)
                 print("HIDEV \n \n \n")
             
         
@@ -51,7 +54,7 @@ for tweet in tweets:
             elif u'\u0900' <= maxchar <= u'\u097f':
                     hidev_per_sent +=1
 
-        print(sentence) 
+        # print(sentence) 
         if(hi_per_sent + hi_per_sent + eng_per_sent != 0):
             if(hi_per_sent + hi_per_sent > eng_per_sent):
                 sent_hin +=1
@@ -61,18 +64,18 @@ for tweet in tweets:
                 #print("EN \n \n \n")
 
 
-        # if hidev_per_sent == max(hidev_per_sent,hi_per_sent,eng_per_sent):
-        #     sent_hin +=1
-        #     print("HI \n \n \n")
-        # elif hi_per_sent == max(hidev_per_sent,hi_per_sent,eng_per_sent):
-        #     sent_hin +=1
-        #     print("HI \n \n \n")
-        # else:
-        #     sent_eng +=1
-        #     print("EN \n \n \n")
+        if hidev_per_sent == max(hidev_per_sent,hi_per_sent,eng_per_sent):
+            sent_hin +=1
+            # print("HI \n \n \n")
+        elif hi_per_sent == max(hidev_per_sent,hi_per_sent,eng_per_sent):
+            sent_hin +=1
+            # print("HI \n \n \n")
+        else:
+            sent_eng +=1
+            # print("EN \n \n \n")
 
     
-
+print word_count
 print en
 print hi
 print hi_dev
