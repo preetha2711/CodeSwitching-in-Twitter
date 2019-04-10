@@ -1,11 +1,17 @@
-file = open("fem_tweets_fin.txt","r")
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
+file = open("fem_tweets_fin.txt","r")
+f3 = open("hidev_words.txt", "w")
 en = 0
 hi = 0
 hi_dev = 0
 content = ''
 word_count = 0
+line_no = -1
 for line in file:
+    line_no +=1
     if "##" not in line:
         content +=line
         words = line.split(" ")
@@ -24,8 +30,11 @@ for line in file:
                 # print("HI \n \n \n")
             elif u'\u0900' <= maxchar <= u'\u097f':
                 hi_dev +=1
-                print (word)
+                print line_no
+                print (word) 
+                print maxchar
                 print("HIDEV \n \n \n")
+                f3.write(word.decode("utf-8") + " "  + "\n")
             
         
             
