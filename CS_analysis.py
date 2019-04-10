@@ -54,7 +54,7 @@ for tweet in tweets:
         print "maxchar: ", maxchar
         if(u'\u0900' <= maxchar <= u'\u097f'):
             sent_hin_dev += 1
-            print "here"
+            
             is_hi_dev = True
             
         else:
@@ -120,16 +120,26 @@ for tweet in tweets:
         CS_tweets += 1
 
 
-    
+
+#Also print these variablea into file.
 print "Total words: ", word_count
 print "English words: ", en
 print "Hindi words: ", hi
 print "Hindi Devanagari words: ", hi_dev
 print "\n"
 print "Tweet total", Tweet_total
+sentence_total = sent_eng + sent_hin + sent_hin_dev
+print "Sentence total: ", sentence_total
 print "sent_eng: ", sent_eng
 print "sent_hin: ", sent_hin
 print "sent_hin_dev", sent_hin_dev
 print "CS_sentences: ", CS_sentences
+percentage_eng_sentences = float(sent_eng) / float(sentence_total)
+percentage_hin_sentences = float(sent_hin) / float(sentence_total)
+percentage_hin_dev_sentences = float(sent_hin_dev) / float(sentence_total)
+percentage_CS_sentences = float(CS_sentences) / float(sentence_total)
 print "CS_tweets: ", CS_tweets
+percentage_CS_tweets = float(CS_tweets) / float(Tweet_total)
 print "CS_Fragment_Length: ", CS_Fragment_Length
+Phrasal_CS = sentence_total - CS_Fragment_Length[0] - CS_Fragment_Length[1] - CS_Fragment_Length[2]
+Lexical_CS = CS_Fragment_Length[1]
