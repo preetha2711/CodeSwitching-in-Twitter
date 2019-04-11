@@ -1,1 +1,0 @@
-file = open("hidev_words.txt", "r")
