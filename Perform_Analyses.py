@@ -1,5 +1,5 @@
-#file = open("fem_tweets_fin.txt","r")
-file = open("Dalit_tagged.txt","r")
+file = open("fem_tweets_fin.txt","r")
+#file = open("Dalit_tagged.txt","r")
 
 en = 0
 hi = 0
@@ -158,6 +158,12 @@ Results.write("\nTotal words: " + str(word_count))
 Results.write("\nEnglish words: "+ str(en))
 Results.write("\nHindi words: "+ str(hi))
 Results.write("\nHindi Devanagari words: "+ str(hi_dev))
+percentage_eng_words = (float(en) / float(word_count))*100
+percentage_hin_words = (float(hi) / float(word_count))*100
+percentage_hin_dev_words = (float(hi_dev) / float(word_count))*100
+Results.write("\nPercentage of English words: "+ str(percentage_eng_words))
+Results.write("\nPercentage of Hindi words: "+ str(percentage_hin_words))
+Results.write("\nPercentage of Hindi Devanagari words: "+ str(percentage_hin_dev_words))
 #Results.write("\n")
 Results.write("\nTweet total: "+ str(Tweet_total))
 #sentence_total = sent_eng + sent_hin + sent_hin_dev
@@ -182,6 +188,8 @@ Results.write("\npercentage_CS_tweets: "+ str(percentage_CS_tweets))
 Results.write("\nCS_Fragment_Length: "+ str(CS_Fragment_Length))
 Phrasal_CS = A_different_total - CS_Fragment_Length[2]
 Results.write("\nPhrasal_CS: "+ str(Phrasal_CS))
+percentage_PCS = (float(Phrasal_CS) / float(A_different_total))*100
+Results.write("\npercentage_Phrasal CS: "+ str(percentage_PCS))
 Lexical_CS = CS_Fragment_Length[1]
 Results.write("\nLexical_CS: "+ str(Lexical_CS))
 
