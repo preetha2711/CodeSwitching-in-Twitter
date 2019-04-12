@@ -1,4 +1,4 @@
-file = open("fem_tweets_fin.txt","r")
+file = open("final_dal.txt","r")
 #file = open("Dalit_tagged.txt","r")
 
 en = 0
@@ -33,7 +33,7 @@ for line in file:
                 # print("HIDEV \n \n \n")
               
          
-tweets= content.split("thisisanewtweet/EN") 
+tweets= content.split("thisisanewtweet") 
 Tweet_total = len(tweets)     
 sent_hin = 0
 sent_eng = 0
@@ -147,7 +147,7 @@ Lexical_CS = CS_Fragment_Length[1]
 
 
 
-Results = open("Results.txt", "a")
+Results = open("Results_Dalit.txt", "a")
 A_different_total = 0
 sizeCSFL = len(CS_Fragment_Length)
 for i in range (2, sizeCSFL):

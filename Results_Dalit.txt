@@ -1,0 +1,24 @@
+
+Total words: 1819776
+English words: 379763
+Hindi words: 109177
+Hindi Devanagari words: 1330836
+Percentage of English words: 20.8686673525
+Percentage of Hindi words: 5.99947466062
+Percentage of Hindi Devanagari words: 73.1318579869
+Tweet total: 19480
+Sentence total: 62027
+sent_eng: 20191
+sent_hin: 10412
+sent_hin_dev: 31424
+CS_sentences: 7716
+percentage_eng_sentences: 32.5519531817
+percentage_hin_sentences: 16.7862382511
+percentage_hin_dev_sentences: 50.6618085672
+percentage_CS_sentences: 12.4397439825
+CS_tweets: 8590
+percentage_CS_tweets: 44.0965092402
+CS_Fragment_Length: [11810, 11077, 4201, 1724, 795, 430, 247, 137, 77, 49, 22, 8, 13, 4, 4, 1, 1, 2, 1, 0]
+Phrasal_CS: 3515
+percentage_Phrasal CS: 45.55469155
+Lexical_CS: 11077
