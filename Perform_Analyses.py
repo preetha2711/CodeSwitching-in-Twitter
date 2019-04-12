@@ -1,4 +1,4 @@
-file = open("final_dal.txt","r")
+file = open("fem_tweets_fin.txt","r")
 #file = open("Dalit_tagged.txt","r")
 
 en = 0
@@ -117,7 +117,7 @@ for tweet in tweets:
             CS_Fragment_Length[CS_max_fragment] += 1
 
 
-    if(eng_per_tweet > 0 and hi_per_tweet > 0):
+    if(eng_per_tweet > 1 and hi_per_tweet > 1):
         CS_tweets += 1
 
 
@@ -147,7 +147,7 @@ Lexical_CS = CS_Fragment_Length[1]
 
 
 
-Results = open("Results_Dalit.txt", "a")
+Results = open("Results_Fem_Fin.txt", "a")
 A_different_total = 0
 sizeCSFL = len(CS_Fragment_Length)
 for i in range (2, sizeCSFL):
